@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web.Mvc;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TournamentsMVC;
 using TournamentsMVC.Controllers;
-using NUnit.Framework;
 
 namespace TournamentsMVC.UnitTests.Controllers
 {
-    [TestFixture]
+    [TestClass]
     public class HomeControllerTest
     {
-        [Test]
+        [TestMethod]
         public void Index()
         {
             // Arrange
@@ -25,7 +25,7 @@ namespace TournamentsMVC.UnitTests.Controllers
             Assert.IsNotNull(result);
         }
 
-        [Test]
+        [TestMethod]
         public void About()
         {
             // Arrange
@@ -38,7 +38,7 @@ namespace TournamentsMVC.UnitTests.Controllers
             Assert.AreEqual("Your application description page.", result.ViewBag.Message);
         }
 
-        [Test]
+        [TestMethod]
         public void Contact()
         {
             // Arrange
