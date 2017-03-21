@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournamentsMVC.UnitTests", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournamentsMVC.IntegrationTests", "TournamentsMVC.IntegrationTests\TournamentsMVC.IntegrationTests.csproj", "{93219EA4-F249-4B54-97B8-2BDD4F4FDA6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournamentsMVC.NUnitTests", "TournamentsMVC.NUnitTests\TournamentsMVC.NUnitTests.csproj", "{4D1B76CA-E75C-4F69-9016-B118BF6B72E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{93219EA4-F249-4B54-97B8-2BDD4F4FDA6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93219EA4-F249-4B54-97B8-2BDD4F4FDA6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93219EA4-F249-4B54-97B8-2BDD4F4FDA6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D1B76CA-E75C-4F69-9016-B118BF6B72E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D1B76CA-E75C-4F69-9016-B118BF6B72E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D1B76CA-E75C-4F69-9016-B118BF6B72E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D1B76CA-E75C-4F69-9016-B118BF6B72E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
