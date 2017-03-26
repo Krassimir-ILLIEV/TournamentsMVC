@@ -294,13 +294,7 @@
     <Content Include="Content\chat.css" />
     <Content Include="Content\checkboxes.css" />
     <Content Include="Content\custom-styles.css" />
-    <Content Include="Content\rating.css" />
-    <Content Include="Content\SiteImages\booksbanner.png" />
-    <Content Include="Content\SiteImages\east-of-eden.jpg" />
-    <Content Include="Content\SiteImages\img_sprite.png" />
-    <Content Include="Content\SiteImages\logo.png" />
-    <Content Include="Content\SiteImages\open-book.jpg" />
-    <Content Include="Content\SiteImages\profile-banner.jpg" />
+    <Content Include="Content\rating.css" />    
     <Content Include="Content\SiteImages\profile-icon.png" />
     <Content Include="Content\SiteImages\strip-blue.png" />
     <Content Include="Content\SiteImages\tournament-home.jpg" />
