@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TournamentsMVC.Models;
+using Microsoft.AspNet.Identity;
 using AutoMapper;
 using TournamentsMVC.Data.Contracts;
 using TournamentsMVC.Services.Contracts;
@@ -37,6 +38,7 @@ namespace TournamentsMVC.Areas.Admin.Controllers
         public ActionResult Index()
         {
             var model = new AddPlayerViewModel();
+            model.Teams = this.GetTeams();
             return this.View(model);
         }
 
@@ -46,6 +48,7 @@ namespace TournamentsMVC.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
             {
+                playerModel.Teams = this.GetTeams();
                 return View(playerModel);
             }
 
@@ -73,16 +76,16 @@ namespace TournamentsMVC.Areas.Admin.Controllers
                 FirstName = playerModel.FirstName,
                 LastName = playerModel.LastName,
                 NickName = playerModel.NickName,
-                CV = playerModel.CV,
+                CV = "", //playerModel.CV,
                 Email = playerModel.Email,
-                IsCoach = playerModel.IsCoach,
+                IsCoach = false, //playerModel.IsCoach,
                 Picture = filename,
                 Rating = 0,
                 Votes = 0,
                 //Team = playerModel.Team,
-                TeamId = playerModel.TeamId,
-                User = playerModel.User,
-                UserId = playerModel.UserId
+                TeamId = 1, // playerModel.TeamId, todo
+                //User = playerModel.User,
+                UserId = new Guid(this.User.Identity.GetUserId())
             };
 
             return player;
@@ -101,6 +104,12 @@ namespace TournamentsMVC.Areas.Admin.Controllers
                 || contentType == "image/png";
 
             return result;
+        }
+
+        private IEnumerable<SelectListItem> GetTeams()
+        {
+            var teams = this.teamService.GetAllTeams().Select(x => new SelectListItem() { Value = x.Id.ToString(), Text = x.Name }).ToList();
+            return teams;
         }
     }
 }

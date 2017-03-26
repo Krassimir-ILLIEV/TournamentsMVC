@@ -14,6 +14,7 @@ namespace TournamentsMVC.Data.Migrations
         {
             this.AutomaticMigrationsEnabled = true;
             this.AutomaticMigrationDataLossAllowed = true;
+
         }
 
         protected override void Seed(TournamentSystemDbContext context)

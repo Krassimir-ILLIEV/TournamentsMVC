@@ -157,7 +157,7 @@ namespace TournamentsMVC.Controllers
                 var result = await this.UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    this.UserManager.AddToRole(user.Id, RoleNames.Regular);
+                    this.UserManager.AddToRole(user.Id, RoleNames.Player);
 
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     

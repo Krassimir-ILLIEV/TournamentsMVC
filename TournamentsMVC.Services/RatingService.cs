@@ -36,22 +36,21 @@ namespace TournamentsMVC.Services
             }
         }
 
-        public void RatePlayer(int playerId, int currentRating)
+        public Player RatePlayer(int playerId, int currentRating)
         {
             // TODO: check rating range
-
             var player = this.data.Players.All.Where(x => x.Id == playerId).FirstOrDefault();            
             if (player != null)
             {
                 player.Rating = (player.Rating*player.Votes+currentRating)/(player.Votes+1);
                 player.Votes++;
+                this.data.SaveChanges();
+                return player;
             }
             else
             {
-                throw new ArgumentException("No player with id {playerId} found in database");
-            }
-
-            this.data.SaveChanges();
+                return null;// throw new ArgumentException("No player with id {playerId} found in database");
+            }            
         }
     }
 }

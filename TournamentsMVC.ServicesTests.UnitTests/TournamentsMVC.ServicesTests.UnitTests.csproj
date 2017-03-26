@@ -65,10 +65,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PlayerServiceTests\AddPlayer_Should.cs" />
     <Compile Include="PlayerServiceTests\Constructor_Should.cs" />
+    <Compile Include="PlayerServiceTests\GetHighestRatedPlayers_Should.cs" />
     <Compile Include="PlayerServiceTests\GetPlayerById_Should.cs" />
+    <Compile Include="PlayerServiceTests\GetPlayerRating_Should.cs" />
     <Compile Include="PlayerServiceTests\GetPlayersCount_Should.cs" />
     <Compile Include="PlayerServiceTests\SearchPlayers_Should.cs" />
+    <Compile Include="RatingServiceTests\Constructor_Should.cs" />
+    <Compile Include="RatingServiceTests\RatePlayer_Should.cs" />
+    <Compile Include="RatingServiceTests\GetRating_Should.cs" />
     <Compile Include="TeamServiceTests\Contructor_Should.cs" />
     <Compile Include="TeamServiceTests\GetAllTeams_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

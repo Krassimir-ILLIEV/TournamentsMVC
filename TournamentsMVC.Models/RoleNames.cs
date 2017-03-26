@@ -9,6 +9,8 @@ namespace TournamentsMVC.Models
     public static class RoleNames
     {
         public const string Admin = "Admin";
-        public const string Regular = "Regular";
+        public const string Coach = "Coach";
+        public const string Player = "Player";
+        public const string Sponsor = "Sponsor";
     }
 }

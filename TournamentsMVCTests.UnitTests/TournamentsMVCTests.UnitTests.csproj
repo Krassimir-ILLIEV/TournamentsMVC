@@ -83,6 +83,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AddPlayerController\Constructor_Should.cs" />
+    <Compile Include="Controllers\AddPlayerController\Index_Should.cs" />
+    <Compile Include="Controllers\PlayerControllerTests\Constructor_Should.cs" />
+    <Compile Include="Controllers\PlayerControllerTests\GetRatingPartial_Should.cs" />
+    <Compile Include="Controllers\PlayerControllerTests\Index_Should.cs" />
+    <Compile Include="Controllers\PlayerControllerTests\Rate_Should.cs" />
     <Compile Include="Controllers\ChatControllerTests\Index_Should.cs" />
     <Compile Include="Controllers\HomeControllerTests\About_Should.cs" />
     <Compile Include="Controllers\HomeControllerTests\Constructor_Should.cs" />

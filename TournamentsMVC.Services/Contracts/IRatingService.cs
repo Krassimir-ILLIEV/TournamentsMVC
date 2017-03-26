@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TournamentsMVC.Models;
 
 namespace TournamentsMVC.Services.Contracts
 {
@@ -10,6 +11,6 @@ namespace TournamentsMVC.Services.Contracts
     {
         double GetRating(int playerId);
 
-        void RatePlayer(int playerId, int currentRating);
+        Player RatePlayer(int playerId, int currentRating);
     }
 }

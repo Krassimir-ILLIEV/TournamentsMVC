@@ -41,7 +41,7 @@ namespace TournamentsMVC.Models
 
         public string CV { get; set; }
 
-        public int? TeamId { get; set; }
+        public int TeamId { get; set; }
 
         public virtual Team Team { get; set; }
 

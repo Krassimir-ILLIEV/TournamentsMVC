@@ -76,12 +76,12 @@ namespace TournamentsMVC
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(tournamentDbContext));
             var userManager = new UserManager<User>(new UserStore<User>(tournamentDbContext));
 
-            if (!roleManager.RoleExists("Admin"))
+            if (!roleManager.RoleExists(RoleNames.Admin))
             {
 
                 // first we create Admin rool   
                 var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-                role.Name = "Admin";
+                role.Name = RoleNames.Admin;
                 roleManager.Create(role);
 
                 //Here we create a Admin super user who will maintain the website                  
@@ -103,27 +103,27 @@ namespace TournamentsMVC
             }
 
             // creating Creating Coach role    
-            if (!roleManager.RoleExists("Coach"))
+            if (!roleManager.RoleExists(RoleNames.Coach))
             {
                 var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-                role.Name = "Coach";
+                role.Name = RoleNames.Coach;
                 roleManager.Create(role);
 
             }
 
             // creating Creating Player role    
-            if (!roleManager.RoleExists("Player"))
+            if (!roleManager.RoleExists(RoleNames.Player))
             {
                 var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-                role.Name = "Player";
+                role.Name = RoleNames.Player;
                 roleManager.Create(role);
             }
 
             // creating Creating Sponsor role    
-            if (!roleManager.RoleExists("Sponsor"))
+            if (!roleManager.RoleExists(RoleNames.Sponsor))
             {
                 var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-                role.Name = "Sponsor";
+                role.Name = RoleNames.Sponsor;
                 roleManager.Create(role);
             }
         }

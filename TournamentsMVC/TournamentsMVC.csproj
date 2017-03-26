@@ -294,7 +294,7 @@
     <Content Include="Content\chat.css" />
     <Content Include="Content\checkboxes.css" />
     <Content Include="Content\custom-styles.css" />
-    <Content Include="Content\rating.css" />    
+    <Content Include="Content\rating.css" />
     <Content Include="Content\SiteImages\profile-icon.png" />
     <Content Include="Content\SiteImages\strip-blue.png" />
     <Content Include="Content\SiteImages\tournament-home.jpg" />
@@ -370,6 +370,10 @@
     <None Include="Scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Custom\chat.js" />
+    <Content Include="Scripts\Custom\datepicker.js" />
+    <Content Include="Scripts\Custom\initialize-rating.js" />
+    <Content Include="Scripts\Custom\search-submit.js" />
     <Content Include="Scripts\jquery-1.12.4.js" />
     <Content Include="Scripts\jquery-1.12.4.min.js" />
     <Content Include="Scripts\jquery-1.12.4.min.map" />

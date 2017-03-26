@@ -25,14 +25,14 @@ namespace TournamentsMVC.Areas.Admin.Models
         [StringLength(50)]
         public string NickName { get; set; }
 
-        //public string Picture { get; set; }
-        [Display(Name = "Player photo")]
-        public HttpPostedFileBase PhotoFile { get; set; }
-
         [Required]
         [MinLength(8)]
         [StringLength(50)]
         public string Email { get; set; }
+
+        //public string Picture { get; set; }
+        [Display(Name = "Player photo")]
+        public HttpPostedFileBase PhotoFile { get; set; }
 
         public double? Rating { get; set; }
 
@@ -44,7 +44,7 @@ namespace TournamentsMVC.Areas.Admin.Models
 
         public int? TeamId { get; set; }
 
-        public virtual Team Team { get; set; }
+        public IEnumerable<SelectListItem> Teams { get; set; }
 
         public Guid UserId { get; set; }
 

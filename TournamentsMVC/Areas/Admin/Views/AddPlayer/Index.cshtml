@@ -29,20 +29,21 @@
             @Html.ValidationMessageFor(m => m.NickName, "", new { @class = "text-danger" })
         </div>
     </div>
-    @*<div class="form-group">
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+        </div>
+    </div>    
+  
+    <div class="form-group">
         @Html.LabelFor(m => m.TeamId, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.DropDownListFor(m => m.TeamId, Model.Teams, new { @class = "form-control" })
         </div>
-    </div>
-    <div class="form-group">
-            @Html.LabelFor(m => m.PublishedOn, new { @class = "col-md-2 control-label" })
-            <div class="col-md-10">
-                @Html.EditorFor(m => m.PublishedOn)
-                @Html.ValidationMessageFor(m => m.PublishedOn, "", new { @class = "text-danger" })
-            </div>
-        </div>
-    *@
+    </div>  
+
     <div class="form-group">
         @Html.LabelFor(m => m.PhotoFile, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
