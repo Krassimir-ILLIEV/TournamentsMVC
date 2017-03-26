@@ -1,0 +1,53 @@
+﻿@model TournamentsMVC.ViewModels.Models.BookDetailsViewModel
+@{
+    ViewBag.Title = Model.Title;
+}
+
+@section styles{
+    <link rel="stylesheet" href="@Url.Content("~/Content/rating.css")" />
+}
+
+<div class="container single_top main-content">
+    <div class="row">
+        <div class="col-md-3">
+            <img class="img-responsive book-details-img" src="@Url.Content($"~/Content/Images/{Model.CoverFile}")" alt="@Model.Title" />
+        </div>
+        <div class="col-md-9">
+            <h1>@Model.Title</h1>
+            <h3>@Model.Author</h3>
+            <p class="book-description">@Model.Description</p>
+            <h5>@Model.GenreName</h5>
+            <p>Published on: @Model.PublishedOn.ToShortDateString()</p>
+
+            @if (this.User.Identity.IsAuthenticated)
+            {
+                @Html.Action("GetRatingPartial", new { id = Model.Id })
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary">Want to Read</button>
+                    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Want to Read</a></li>
+                        <li><a class="dropdown-item" href="#">Read</a></li>
+                        <li><a class="dropdown-item" href="#">CurrentlyReading</a></li>
+                    </ul>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<div class="single_social_top">
+    <ul class="single_social">
+        <li><a href="#"> <i class="s_fb"> </i> <div class="social_desc">Share<br> on facebook</div><div class="clearfix"> </div></a></li>
+        <li><a href="#"> <i class="s_twt"> </i> <div class="social_desc">Tweet<br> this product</div><div class="clearfix"> </div></a></li>
+        <li><a href="#"> <i class="s_google"> </i><div class="social_desc">Google+<br> this product</div><div class="clearfix"> </div></a></li>
+        <li class="last"><a href="#"> <i class="s_email"> </i><div class="social_desc">Email<br> a Friend</div><div class="clearfix"> </div></a></li>
+    </ul>
+</div>
+</div>
+
+@section scripts{
+    @Scripts.Render("~/bundles/ratings");
+}

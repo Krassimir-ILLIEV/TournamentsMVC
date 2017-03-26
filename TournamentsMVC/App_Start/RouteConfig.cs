@@ -11,7 +11,21 @@ namespace TournamentsMVC
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.LowercaseUrls = true;
+
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");                       
+
+            routes.MapRoute(
+               name: "Rate",
+               url: "player/rate",
+               defaults: new { controller = "Player", action = "Rate" }
+           );
+
+            routes.MapRoute(
+               name: "Player",
+               url: "player/{id}",
+               defaults: new { controller = "Player", action = "Index" }
+           );
 
             routes.MapRoute(
                 name: "Default",

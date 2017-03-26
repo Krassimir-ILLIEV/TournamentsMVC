@@ -6,7 +6,8 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using TournamentsMVC.Models;
+using TournamentsMVC.ViewModels.Models;
+using TournamentsMVC.Identity;
 
 namespace TournamentsMVC.Controllers
 {
@@ -195,9 +196,7 @@ namespace TournamentsMVC.Controllers
         }
 
         //
-        // POST: /Manage/RemovePhoneNumber
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        // GET: /Manage/RemovePhoneNumber
         public async Task<ActionResult> RemovePhoneNumber()
         {
             var result = await UserManager.SetPhoneNumberAsync(User.Identity.GetUserId(), null);

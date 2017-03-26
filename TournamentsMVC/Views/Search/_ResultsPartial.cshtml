@@ -1,0 +1,32 @@
+﻿@model TournamentsMVC.ViewModels.Models.SearchResultsViewModel
+
+<div>Results: @Model.PlayersCount players</div>
+@foreach (var player in Model.Players)
+{
+    <div class="col-md-4 text-center">
+        @Html.DisplayFor(_ => player)
+    </div>
+}
+
+<div >
+    <ul class="pagination">
+        @for (int i = 1; i <= Model.Pages; i++)
+            {
+            <li>
+                @Ajax.ActionLink(i.ToString(), "SearchPlayers",
+            new
+            {
+                SearchWord = Model.SubmitModel.SearchWord,
+                SortBy = Model.SubmitModel.SortBy,
+                ChosenTeamIds = Model.SubmitModel.ChosenTeamIds,
+                Page = i
+            },
+            new AjaxOptions()
+            {
+                UpdateTargetId = "search-results",
+                InsertionMode = InsertionMode.Replace
+            })
+            </li>
+        }
+    </ul>
+</div>

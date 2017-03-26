@@ -1,0 +1,84 @@
+﻿@model TournamentsMVC.ViewModels.Models.SearchViewModel
+@{
+    ViewBag.Title = "Search";
+}
+
+<div class="container main-content">
+    <!-- start sidebar -->
+    <div class="row">
+        @using (Ajax.BeginForm("SearchPlayers", null,
+            new AjaxOptions()
+            {
+                HttpMethod = "GET",
+                UpdateTargetId = "search-results",
+                InsertionMode = InsertionMode.Replace
+            },
+            new { id = "search-form" }))
+        {
+            <div class="form-group">
+                <input type="text" name="SearchWord" class="form-control inline-block" placeholder="Search" />                
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+
+            <ul class="inline-list">
+                <li>Sort : </li>
+                <li>
+                    <input id="sort1" type="radio" name="SortBy" value="FirstName" class="display-none submit-on-checked">
+                    <label for="sort1" class="cursor-pointer">First Name</label>
+                </li> |
+                <li>
+                    <input id="sort2" type="radio" name="SortBy" value="LastName" class="display-none submit-on-checked">
+                    <label for="sort2" class="cursor-pointer">Last Name</label>
+                </li> |
+                <li>
+                    <input id="sort3" type="radio" name="SortBy" value="TeamName" class="display-none submit-on-checked">
+                    <label for="sort3" class="cursor-pointer">Team Name</label>
+                </li>
+                <div class="clear"></div>
+            </ul>
+
+            <div class="col-md-3">
+                <div>
+                    <section>
+                        <h4 class="teams-bg">Teams</h4>
+                        <div class="row1">
+                            @foreach (var team in Model.Teams)
+                            {
+                                <div class="checkbox-new">
+                                    <label>
+                                        <input type="checkbox" class="submit-on-checked" name="ChosenTeamIds" value="@team.Id">
+                                        <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                        @team.Name
+                                    </label>
+                                </div>
+                            }
+                            <div class="checkbox-new">
+                                <label>
+                                    <input type="checkbox" name="team" value="">
+                                    <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                    Option
+                                </label>
+                            </div>
+                            <div class="checkbox-new">
+                                <label>
+                                    <input type="checkbox" name="team" value="">
+                                    <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                    Option
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        }
+        <div id="search-results" class="col-md-9">
+            @Html.Action("SearchPlayers");
+        </div>      
+    </div>
+</div>
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.min.js")
+    @Scripts.Render("~/Scripts/Custom/search-submit.js")
+}

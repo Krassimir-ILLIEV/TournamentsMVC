@@ -1,0 +1,53 @@
+.logo-img{
+    height: 1.8em;
+}
+
+.right-float{
+    float: right;
+}
+
+.account-menu{
+    margin-top: 5px;
+}
+
+.main-header{
+    margin-bottom: 5px;
+}
+
+.navbar-default .navbar-nav > li{
+    height: 80%;
+}
+
+.navbar-default .navbar-nav > .active > a{
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a:hover{
+    background-color: #72B1FF;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+    background-color: #72B1FF
+}
+
+.navbar{
+    margin-bottom: 0px !important;
+}
+
+.navbar-brand{
+    padding-top: 15px;
+}
+
+.navbar-nav > li > a {
+    padding-top: 10.5px;
+    padding-bottom: 10.5px;
+    margin-top: 10px;
+}
+
+.shop-content a{
+    color: black;
+}
+
+.product-img .img-responsive {
+    margin: 0 auto;
+}

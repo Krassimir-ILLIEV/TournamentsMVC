@@ -1,87 +1,76 @@
-﻿@model TournamentsMVC.Models.IndexViewModel
+﻿@model TournamentsMVC.ViewModels.Models.IndexViewModel
+@using Microsoft.AspNet.Identity
 @{
-    ViewBag.Title = "Manage";
+    ViewBag.Title = "Profile";
 }
 
-<h2>@ViewBag.Title.</h2>
-
-<p class="text-success">@ViewBag.StatusMessage</p>
 <div>
-    <h4>Change your account settings</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>Password:</dt>
-        <dd>
-            [
-            @if (Model.HasPassword)
-            {
-                @Html.ActionLink("Change your password", "ChangePassword")
-            }
-            else
-            {
-                @Html.ActionLink("Create", "SetPassword")
-            }
-            ]
-        </dd>
-        <dt>External Logins:</dt>
-        <dd>
-            @Model.Logins.Count [
-            @Html.ActionLink("Manage", "ManageLogins") ]
-        </dd>
-        @*
-            Phone Numbers can used as a second factor of verification in a two-factor authentication system.
-             
-             See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
-                for details on setting up this ASP.NET application to support two-factor authentication using SMS.
-             
-             Uncomment the following block after you have set up two-factor authentication
-        *@
-        @*  
-            <dt>Phone Number:</dt>
-            <dd>
-                @(Model.PhoneNumber ?? "None")
-                @if (Model.PhoneNumber != null)
-                {
-                    <br />
-                    <text>[&nbsp;&nbsp;@Html.ActionLink("Change", "AddPhoneNumber")&nbsp;&nbsp;]</text>
-                    using (Html.BeginForm("RemovePhoneNumber", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-                    {
-                        @Html.AntiForgeryToken()
-                        <text>[<input type="submit" value="Remove" class="btn-link" />]</text>
-                    }
-                }
-                else
-                {
-                    <text>[&nbsp;&nbsp;@Html.ActionLink("Add", "AddPhoneNumber")
-                }
-            </dd>
-        *@
-        <dt>Two-Factor Authentication:</dt>
-        <dd>
-            <p>
-                There are no two-factor authentication providers configured. See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
-                for details on setting up this ASP.NET application to support two-factor authentication.
-            </p>
-            @*@if (Model.TwoFactor)
-                {
-                    using (Html.BeginForm("DisableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-                    {
-                        @Html.AntiForgeryToken()
-                        <text>Enabled
-                        <input type="submit" value="Disable" class="btn btn-link" />
-                        </text>
-                    }
-                }
-                else
-                {
-                    using (Html.BeginForm("EnableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-                    {
-                        @Html.AntiForgeryToken()
-                        <text>Disabled
-                        <input type="submit" value="Enable" class="btn btn-link" />
-                        </text>
-                    }
-                }*@
-        </dd>
-    </dl>
+    <div class="card hovercard">
+        <div class="card-background">
+            <img class="card-bkimg" alt="" src="~/Content/SiteImages/profile-banner.jpg">
+            <!-- http://lorempixel.com/850/280/people/9/ -->
+        </div>
+        <div class="useravatar">
+            <img alt="" src="~/Content/SiteImages/profile-icon.png">
+        </div>
+        @*<div class="card-info">*@
+            <h2 class="card-info text-center text-uppercase">@(User.Identity.GetUserName())</h2>
+            @*<span class="card-title">Pamela Anderson</span>
+        </div>*@
+    </div>
+    <div class="container">
+        <ul class="nav nav-tabs nav-justified">
+            <li class="active">
+                <a href="#1" data-toggle="tab" class="text-bold">Want to Read</a>
+            </li>
+            <li>
+                <a href="#2" data-toggle="tab" class="text-bold">Read</a>
+            </li>
+            <li>
+                <a href="#3" data-toggle="tab" class="text-bold">Currently Reading</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="1">
+                <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
+            </div>
+            <div class="tab-pane" id="2">
+                <h3>Notice the gap between the content and tab after applying a background color</h3>
+            </div>
+            <div class="tab-pane" id="3">
+                <h3>add clearfix to tab-content (see the css)</h3>
+            </div>
+        </div>
+    </div>
 </div>
+
+@*<div class="container main-content">
+    <h2 class="text-center text-uppercase profile-username">@(User.Identity.GetUserName())</h2>
+ 
+    <div class="container">
+        <ul class="nav nav-tabs nav-justified">
+            <li class="active">
+                <a href="#1" data-toggle="tab" class="text-bold">Want to Read</a>
+            </li>
+            <li>
+                <a href="#2" data-toggle="tab" class="text-bold">Read</a>
+            </li>
+            <li>
+                <a href="#3" data-toggle="tab" class="text-bold">Currently Reading</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="1">
+                <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
+            </div>
+            <div class="tab-pane" id="2">
+                <h3>Notice the gap between the content and tab after applying a background color</h3>
+            </div>
+            <div class="tab-pane" id="3">
+                <h3>add clearfix to tab-content (see the css)</h3>
+            </div>
+        </div>
+    </div>
+</div>*@

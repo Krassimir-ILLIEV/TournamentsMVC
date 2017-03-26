@@ -1,0 +1,14 @@
+﻿@model TournamentsMVC.ViewModels.Models.PlayerViewModel
+
+<div class="product-img">
+    <a href="~/player/@(Model.Id)">
+        <img src="@Url.Content($"~/Content/Images/{Model.Picture}")" class="img-responsive text-center" alt="@Model.FirstName">
+    </a>
+</div>
+
+<div class="shop-content">
+    <h3><a href="~/player/@Model.Id">@Model.FirstName</a></h3>
+    <div>@Model.TeamId</div>
+</div>
+
+
