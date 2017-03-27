@@ -10,6 +10,7 @@ using TournamentsMVC.Data.Contracts;
 using TournamentsMVC.Services.Contracts;
 using System.IO;
 using TournamentsMVC.Areas.Admin.Models;
+using TournamentsMVC.Common.Constants;
 
 namespace TournamentsMVC.Areas.Admin.Controllers
 {
@@ -44,6 +45,7 @@ namespace TournamentsMVC.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]  //Perhaps remove
         public ActionResult Index([Bind(Exclude = "Teams")]AddPlayerViewModel playerModel)
         {
             if (!ModelState.IsValid)
@@ -67,7 +69,8 @@ namespace TournamentsMVC.Areas.Admin.Controllers
         private Player GetPlayer(AddPlayerViewModel playerModel)
         {
             var filename = playerModel.PhotoFile.FileName;
-            var path = this.Server.MapPath($"~/Content/Images/{filename}");
+            //var path = this.Server.MapPath($"~/Content/Images/{filename}");
+            var path = this.Server.MapPath(ProjectConstants.ImagesRelativePath+filename);
             playerModel.PhotoFile.SaveAs(path);
 
             // TODO map?

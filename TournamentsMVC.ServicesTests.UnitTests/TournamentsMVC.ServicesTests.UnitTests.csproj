@@ -98,10 +98,6 @@
       <Project>{fa4c7cd7-c8af-456e-9975-463be6ba0613}</Project>
       <Name>TournamentsMVC.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TournamentsMVC.ViewModels\TournamentsMVC.ViewModels.csproj">
-      <Project>{3fcf832e-93e0-4c76-af15-a241fc2d148e}</Project>
-      <Name>TournamentsMVC.ViewModels</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

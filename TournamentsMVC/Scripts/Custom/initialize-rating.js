@@ -7,7 +7,7 @@
 
         const id = $("#star-rating").attr("data-id");
         $.ajax({
-            url: "/book/rate",
+            url: "/player/rate",
             type: "GET",
             data: { rate: vote, id: id },
             success: function (data) {

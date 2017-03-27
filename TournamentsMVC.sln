@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournamentsMVC", "TournamentsMVC\TournamentsMVC.csproj", "{9A020A6C-A319-43F0-B2DB-96FAB2EA69F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournamentsMVC.UnitTests", "TournamentsMVC.UnitTests\TournamentsMVC.UnitTests.csproj", "{E1E317D6-BBF0-4B63-BD85-D50CED81B3EC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournamentsMVC.IntegrationTests", "TournamentsMVC.IntegrationTests\TournamentsMVC.IntegrationTests.csproj", "{93219EA4-F249-4B54-97B8-2BDD4F4FDA6D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournamentsMVC.Data", "TournamentsMVC.Data\TournamentsMVC.Data.csproj", "{01D921D1-8EC7-4775-9644-0B7ADAEE0813}"
@@ -14,8 +12,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournamentsMVC.Models", "TournamentsMVC.Models\TournamentsMVC.Models.csproj", "{26A14156-B3F8-4304-8F01-143D72CE3527}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournamentsMVC.Services", "TournamentsMVC.Services\TournamentsMVC.Services.csproj", "{FA4C7CD7-C8AF-456E-9975-463BE6BA0613}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournamentsMVC.ViewModels", "TournamentsMVC.ViewModels\TournamentsMVC.ViewModels.csproj", "{3FCF832E-93E0-4C76-AF15-A241FC2D148E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournamentsMVCTests.UnitTests", "TournamentsMVCTests.UnitTests\TournamentsMVCTests.UnitTests.csproj", "{A61BD69E-DCDC-4B02-931C-19E054FD4F09}"
 EndProject
@@ -33,10 +29,6 @@ Global
 		{9A020A6C-A319-43F0-B2DB-96FAB2EA69F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A020A6C-A319-43F0-B2DB-96FAB2EA69F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A020A6C-A319-43F0-B2DB-96FAB2EA69F1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E1E317D6-BBF0-4B63-BD85-D50CED81B3EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E1E317D6-BBF0-4B63-BD85-D50CED81B3EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E1E317D6-BBF0-4B63-BD85-D50CED81B3EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E1E317D6-BBF0-4B63-BD85-D50CED81B3EC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{93219EA4-F249-4B54-97B8-2BDD4F4FDA6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{93219EA4-F249-4B54-97B8-2BDD4F4FDA6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93219EA4-F249-4B54-97B8-2BDD4F4FDA6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,10 +45,6 @@ Global
 		{FA4C7CD7-C8AF-456E-9975-463BE6BA0613}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA4C7CD7-C8AF-456E-9975-463BE6BA0613}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA4C7CD7-C8AF-456E-9975-463BE6BA0613}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3FCF832E-93E0-4C76-AF15-A241FC2D148E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3FCF832E-93E0-4C76-AF15-A241FC2D148E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3FCF832E-93E0-4C76-AF15-A241FC2D148E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3FCF832E-93E0-4C76-AF15-A241FC2D148E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A61BD69E-DCDC-4B02-931C-19E054FD4F09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A61BD69E-DCDC-4B02-931C-19E054FD4F09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A61BD69E-DCDC-4B02-931C-19E054FD4F09}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -70,7 +58,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{E1E317D6-BBF0-4B63-BD85-D50CED81B3EC} = {4E2F236F-0113-4DC8-99E0-BA94CDC991E1}
 		{93219EA4-F249-4B54-97B8-2BDD4F4FDA6D} = {4E2F236F-0113-4DC8-99E0-BA94CDC991E1}
 		{A61BD69E-DCDC-4B02-931C-19E054FD4F09} = {4E2F236F-0113-4DC8-99E0-BA94CDC991E1}
 		{E7B7A445-244D-4D8B-85DA-0CC1AC4B3BC5} = {4E2F236F-0113-4DC8-99E0-BA94CDC991E1}

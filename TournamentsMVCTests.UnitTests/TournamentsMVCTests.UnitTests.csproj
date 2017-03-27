@@ -84,7 +84,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AddPlayerController\Constructor_Should.cs" />
+    <Compile Include="Controllers\AddPlayerController\IndexPost_Should.cs" />
     <Compile Include="Controllers\AddPlayerController\Index_Should.cs" />
+    <Compile Include="Controllers\AddPlayerController\ThisClass_Should.cs" />
+    <Compile Include="Controllers\ChatControllerTests\ThisClass_Should.cs" />
     <Compile Include="Controllers\PlayerControllerTests\Constructor_Should.cs" />
     <Compile Include="Controllers\PlayerControllerTests\GetRatingPartial_Should.cs" />
     <Compile Include="Controllers\PlayerControllerTests\Index_Should.cs" />
@@ -115,10 +118,6 @@
     <ProjectReference Include="..\TournamentsMVC.Services\TournamentsMVC.Services.csproj">
       <Project>{fa4c7cd7-c8af-456e-9975-463be6ba0613}</Project>
       <Name>TournamentsMVC.Services</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TournamentsMVC.ViewModels\TournamentsMVC.ViewModels.csproj">
-      <Project>{3fcf832e-93e0-4c76-af15-a241fc2d148e}</Project>
-      <Name>TournamentsMVC.ViewModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\TournamentsMVC\TournamentsMVC.csproj">
       <Project>{9a020a6c-a319-43f0-b2db-96fab2ea69f1}</Project>
